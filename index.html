@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
-    <title>Document</title>
+    <title>Weather Dashboard</title>
 </head>
 <body>
     <header class="container-fluid d-flex align-items-center linearGradient text-white">
@@ -23,16 +23,16 @@
                 <form class="p-2 card">
                     <div class="form-group">
                         <label class="form-group p-2" for="exampleInputPassword1">
-                            <h3 class="line pb-1">Search for a City:</h3>
+                            <h3 class="line pb-1 searchBar">Search for a City:</h3>
                         </label>
-                        <input type="password" class="form-control mb-2" id="exampleInputPassword1" placeholder="City">
+                        <input id="searchBar" type="text" class="form-control mb-2" id="exampleInputPassword1" placeholder="City">
                     </div>
-                <button type="submit" class="btn btn-primary linearGradient">Submit</button>
+                <button type="submit" id="searchBtn" class="btn btn-primary linearGradient">Submit</button>
                 </form>
                 <!--search history-->
                 <div class="card mt-3 p-2">
                     <h3 class="line pb-1">Search History</h3>
-                    <ul>
+                    <ul id="historyList" >
                         <li>City 1</li>
                         <li>City 2</li>
                         <li>City 3</li>
@@ -45,40 +45,55 @@
             <div class="col-md-9">
                 <!--current weather-->
                 <div class="card p-2">
-                    <h2 class="line pb-1">City Name</h2>
-                    <p>Temperature: </p>
-                    <p>Humidity: </p>
-                    <p>Wind Speed: </p>
-                    <p>UV Index: </p>
+                    <div class="hstack gap-3 line pb-1">
+                        <h2 id="cityName">City Name</h2> 
+                        <div class="vr"></div>
+                        <h2 id="todayDate">"new Date()"</h2>
+                    </div>
+                    <div id="currentCityWeather">
+                        <p id="todayTemp">Temperature: </p>
+                        <p id="todayHumidity">Humidity: </p>
+                        <p id="todayWindSpeed">Wind Speed: </p>
+                        <p id="todayUVIndex">UV Index: </p>
+                    </div>
                 </div>
                 <!--5 day forecast-->
                 <div class="card mt-3 p-2">
                     <h2 class="line pb-1">5 Day Forecast</h2>
-                    <div class="row">
+                    <div class="hstack gap-3">
                         <div class="col-2">
-                            <p>Day 1</p>
-                            <p>Temperature: </p>
-                            <p>Humidity: </p>
+                            <h6>Day 1</h6>
+                            <p id="day1Temp">Temperature: </p>
+                            <p id="day1Humidity">Humidity: </p>
+                            <p id="day1WindSpeed">Wind Speed: </p>
                         </div>
+                        <div class="vr"></div>
                         <div class="col-2">
-                            <p>Day 2</p>
-                            <p>Temperature: </p>
-                            <p>Humidity: </p>
+                            <h6>Day 2</h6>
+                            <p id="day2Temp">Temperature: </p>
+                            <p id="day2Humidity">Humidity: </p>
+                            <p id="day2WindSpeed">Wind Speed: </p>
                         </div>
+                        <div class="vr"></div>
                         <div class="col-2">
-                            <p>Day 3</p>
-                            <p>Temperature: </p>
-                            <p>Humidity: </p>
+                            <h6>Day 3</h6>
+                            <p id="day3Temp">Temperature: </p>
+                            <p id="day3Humidity">Humidity: </p>
+                            <p id="day3WindSpeed">Wind Speed: </p>
                         </div>
+                        <div class="vr"></div>
                         <div class="col-2">
-                            <p>Day 4</p>
-                            <p>Temperature: </p>
-                            <p>Humidity: </p>
+                            <h6>Day 4</h6>
+                            <p id="day4Temp">Temperature: </p>
+                            <p id="day4Humidity">Humidity: </p>
+                            <p id="day4WindSpeed">Wind Speed: </p>
                         </div>
+                        <div class="vr"></div>
                         <div class="col-2">
-                            <p>Day 5</p>
-                            <p>Temperature: </p>
-                            <p>Humidity: </p>
+                            <h6>Day 5</h6>
+                            <p id="day5Temp">Temperature: </p>
+                            <p id="day5Humidity">Humidity: </p>
+                            <p id="day5WindSpeed">Wind Speed: </p>
                         </div>
                     </div>
                 </div>
