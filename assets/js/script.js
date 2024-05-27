@@ -14,6 +14,56 @@ document.addEventListener("DOMContentLoaded",function(event){
     var p = document.getElementById("todayDate"); 
     p.innerHTML = newDate;            
 })
+//1st date
+document.addEventListener("DOMContentLoaded",function(event){
+    var date = new Date(); 
+    var dd = date.getDate()+1; 
+    var mm = date.getMonth() + 1; 
+    var yyyy = date.getFullYear(); 
+    var newDate = mm + "-" + dd + "-" +yyyy; 
+    var p = document.getElementById("day1Date"); 
+    p.innerHTML = newDate;            
+})
+//2nd date
+document.addEventListener("DOMContentLoaded",function(event){
+    var date = new Date(); 
+    var dd = date.getDate()+2; 
+    var mm = date.getMonth() + 1; 
+    var yyyy = date.getFullYear(); 
+    var newDate = mm + "-" + dd + "-" +yyyy; 
+    var p = document.getElementById("day2Date"); 
+    p.innerHTML = newDate;            
+})
+//3rd date
+document.addEventListener("DOMContentLoaded",function(event){
+    var date = new Date(); 
+    var dd = date.getDate()+3; 
+    var mm = date.getMonth() + 1; 
+    var yyyy = date.getFullYear(); 
+    var newDate = mm + "-" + dd + "-" +yyyy; 
+    var p = document.getElementById("day3Date"); 
+    p.innerHTML = newDate;            
+})
+//4th date
+document.addEventListener("DOMContentLoaded",function(event){
+    var date = new Date(); 
+    var dd = date.getDate()+4; 
+    var mm = date.getMonth() + 1; 
+    var yyyy = date.getFullYear(); 
+    var newDate = mm + "-" + dd + "-" +yyyy; 
+    var p = document.getElementById("day4Date"); 
+    p.innerHTML = newDate;            
+})
+//5th date
+document.addEventListener("DOMContentLoaded",function(event){
+    var date = new Date(); 
+    var dd = date.getDate()+5; 
+    var mm = date.getMonth() + 1; 
+    var yyyy = date.getFullYear(); 
+    var newDate = mm + "-" + dd + "-" +yyyy; 
+    var p = document.getElementById("day5Date"); 
+    p.innerHTML = newDate;            
+})
 //Event listener on search button that will on click call getBird() saving the value to localStorage
   searchBtnEl.addEventListener('click', function(e) {
     e.preventDefault();
@@ -106,14 +156,31 @@ function getWeather(city) {
     day5HumidityEl.textContent = `Day 5 Humidity: ${birdData.entities[0].name}`;
     day5WindSpeedEl.textContent = `Day 5 Wind Speed: ${birdData.entities[0].name}`;
   
-    birdFacts.append(nameEl);
-    birdFacts.append(sciNameEl);
-    birdFacts.append(familyEl);
-    birdFacts.append(orderEl);
-    birdFacts.append(regionEl);
-    birdFacts.append(statusEl);
-    birdFacts.append(sizeEl);
-    birdFacts.append(wingSpanEl);
+    cityName.append(cityNameEl);
+    birdFacts.append(todayTempEl);
+    birdFacts.append(todayHumidityEl);
+    birdFacts.append(todayWindSpeedEl);
+    birdFacts.append(todayUVIndexEl);
+
+    birdFacts.append(day1TempEl);
+    birdFacts.append(day1HumidityEl);
+    birdFacts.append(day1WindSpeedEl);
+
+    birdFacts.append(day2TempEl);
+    birdFacts.append(day2HumidityEl);
+    birdFacts.append(day2WindSpeedEl);
+
+    birdFacts.append(day3TempEl);
+    birdFacts.append(day3HumidityEl);
+    birdFacts.append(day3WindSpeedEl);
+
+    birdFacts.append(day4TempEl);
+    birdFacts.append(day4HumidityEl);
+    birdFacts.append(day4WindSpeedEl);
+
+    birdFacts.append(day5TempEl);
+    birdFacts.append(day5HumidityEl);
+    birdFacts.append(day5WindSpeedEl);
   }
   // Function to add search history to local storage
   function addToHistory(searchTerm) {
