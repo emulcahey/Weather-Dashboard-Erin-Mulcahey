@@ -77,6 +77,7 @@ function getCity() {
     const searchValue = searchBarEl.value.trim();
 
     let cityArray = JSON.parse(localStorage.getItem('city')) || [];
+    console.log('cityArray', cityArray);
     cityArray.push(searchValue)
     localStorage.setItem('city', JSON.stringify(cityArray));
 //add Add searched term to search history
@@ -86,13 +87,7 @@ function getCity() {
 
   //Will fetch requested city weather info from the weather API using search bar text value pulled from localStorage 
 function getWeather(city) {
-  
-    // list.main.temp
-    // list.weather.icon
-    // list.wind.speed
-    // list.main.humidity
-
-    const geoApi = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=2&appid=18df502e645ab3140dbd925b794d1af9`; //open weather api
+    const geoApi = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=18df502e645ab3140dbd925b794d1af9`; //open weather api
 
     fetch(geoApi, { 
     })
@@ -167,7 +162,11 @@ function getWeatherWithLatLon(geoData) {
     cityNameEl.textContent = `${currentCityWeather.city.name}`;
     const todayImg = document.createElement('img');
     todayImg.src = `https://openweathermap.org/img/wn/${currentCityWeather.list[2].weather[0].icon}.png`;
-    todayIconEl.append(todayImg);
+    if(todayIconEl.firstChild == null){
+        todayIconEl.append(todayImg)
+    }else{
+        todayIconEl.replaceChild(todayImg, todayIconEl.firstChild);
+    }
     todayWeatherDescriptionEl.textContent = `${currentCityWeather.list[2].weather[0].description}`
     const todayTemp = convertTempKelvinToFarenheit(currentCityWeather.list[2].main.temp);
     todayTempEl.textContent = `Temperature: ${todayTemp}\u2109`;
@@ -175,11 +174,13 @@ function getWeatherWithLatLon(geoData) {
     const todayWindSpeed = convertMetersPerSecToMilesPerHour(currentCityWeather.list[2].wind.speed);
     todayWindSpeedEl.textContent = `Wind: ${todayWindSpeed} mph`;
 
-    convertMetersPerSecToMilesPerHour
-
     const day1Img = document.createElement('img');
     day1Img.src = `https://openweathermap.org/img/wn/${currentCityWeather.list[2].weather[0].icon}.png`;
-    day1IconEl.append(day1Img);
+    if(day1IconEl.firstChild == null){
+        day1IconEl.append(day1Img)
+    }else{
+        day1IconEl.replaceChild(day1Img, day1IconEl.firstChild);
+    }
     day1WeatherDescriptionEl.textContent = `${currentCityWeather.list[2].weather[0].description}`
     const day1Temp = convertTempKelvinToFarenheit(currentCityWeather.list[2].main.temp);
     day1TempEl.textContent = `Temperature: ${day1Temp}\u2109`;
@@ -189,7 +190,11 @@ function getWeatherWithLatLon(geoData) {
     
     const day2Img = document.createElement('img');
     day2Img.src = `https://openweathermap.org/img/wn/${currentCityWeather.list[10].weather[0].icon}.png`;
-    day2IconEl.append(day2Img);
+    if(day2IconEl.firstChild == null){
+        day2IconEl.append(day2Img)
+    }else{
+        day2IconEl.replaceChild(day2Img, day2IconEl.firstChild);
+    }    
     day2WeatherDescriptionEl.textContent = `${currentCityWeather.list[10].weather[0].description}`
     const day2Temp = convertTempKelvinToFarenheit(currentCityWeather.list[10].main.temp);
     day2TempEl.textContent = `Temperature: ${day2Temp}\u2109`;
@@ -199,7 +204,11 @@ function getWeatherWithLatLon(geoData) {
 
     const day3Img = document.createElement('img');
     day3Img.src = `https://openweathermap.org/img/wn/${currentCityWeather.list[18].weather[0].icon}.png`;
-    day3IconEl.append(day3Img);
+    if(day3IconEl.firstChild == null){
+        day3IconEl.append(day3Img)
+    }else{
+        day3IconEl.replaceChild(day3Img, day3IconEl.firstChild);
+    }
     day3WeatherDescriptionEl.textContent = `${currentCityWeather.list[18].weather[0].description}`
     const day3Temp = convertTempKelvinToFarenheit(currentCityWeather.list[18].main.temp);
     day3TempEl.textContent = `Temperature: ${day3Temp}\u2109`;
@@ -209,7 +218,11 @@ function getWeatherWithLatLon(geoData) {
 
     const day4Img = document.createElement('img');
     day4Img.src = `https://openweathermap.org/img/wn/${currentCityWeather.list[26].weather[0].icon}.png`;
-    day4IconEl.append(day4Img);
+    if(day4IconEl.firstChild == null){
+        day4IconEl.append(day4Img)
+    }else{
+        day4IconEl.replaceChild(day4Img, day4IconEl.firstChild);
+    }
     day4WeatherDescriptionEl.textContent = `${currentCityWeather.list[26].weather[0].description}`
     const day4Temp = convertTempKelvinToFarenheit(currentCityWeather.list[26].main.temp);
     day4TempEl.textContent = `Temperature: ${day4Temp}\u2109`;
@@ -219,7 +232,11 @@ function getWeatherWithLatLon(geoData) {
         
     const day5Img = document.createElement('img');
     day5Img.src = `https://openweathermap.org/img/wn/${currentCityWeather.list[34].weather[0].icon}.png`;
-    day5IconEl.append(day5Img);
+    if(day5IconEl.firstChild == null){
+        day5IconEl.append(day5Img)
+    }else{
+        day5IconEl.replaceChild(day5Img, day5IconEl.firstChild);
+    }
     day5WeatherDescriptionEl.textContent = `${currentCityWeather.list[34].weather[0].description}`
     const day5Temp = convertTempKelvinToFarenheit(currentCityWeather.list[34].main.temp);
     day5TempEl.textContent = `Temperature: ${day5Temp}\u2109`;
