@@ -4,6 +4,8 @@
 
 My motivation was to build a weather dashboard that will fun in the browser and feature dynamically updated HTML and CSS to show me weather for a selected city. I wanted to build this project so I could easily see the current weather in a given city. This dashboard coad could be changed to specifically give someone specific weather information to suite their needs. For now, the site shows a user the temp, humidity, and wind speed for the chosen city. It also shows a 5 day forcast, so the user can plan their future accordingly. This helps the user know what kind of weather to plan for. In created this website, I learned how to use an API and make multiple requests to that API.
 
+URL: https://emulcahey.github.io/Weather-Dashboard-Erin-Mulcahey/
+
 ## Installation
 
 N/A
