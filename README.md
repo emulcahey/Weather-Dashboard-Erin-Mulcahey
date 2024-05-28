@@ -14,12 +14,8 @@ N/A
 
 To use this website, the first step is for the user to enter a city name into the search fielt toward the top left. Once the user clicks submit, the page will show the entered city name on the top right box. It will also show the following: current weather inforamtion in the top right box, a 5-day weather forcast in the bottom right box, a list of previously searched citys in the bottom left box, and weather icons related to each day's weather. If a user wants to easily go back to a previously searched city, they can go to the history box (lower left box) and click on any of the listed cities. The page will bring up the current weather and 5-day forcast for the selected city.
 
-Provide instructions and examples for use. Include screenshots as needed.
-
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative file path, add it to your README using the following syntax:
-
-![Image of the website with out any searches having been done. Shows labels for weather data with out data loaded in.](images/ScreenShotNoSearches.png)
-![Image of the website with multiple searches having been done. Shows all weather data filled in for selected city.](images/ScreenShotSearches.png)
+![Image of the website with out any searches having been done. Shows labels for weather data with out data loaded in.](Images/ScreenShotNoSearches.png)
+![Image of the website with multiple searches having been done. Shows all weather data filled in for selected city.](Images/ScreenShotSearches.png)
 
 ## Credits
 
