@@ -252,6 +252,14 @@ function getWeatherWithLatLon(geoData) {
       historyList.appendChild(listItem);
     });
   }
+// Event listener on search history list
+document.addEventListener("DOMContentLoaded",function(event){
+    const historyList = document.getElementById('historyList');
+    historyList.addEventListener('click', function(e) {
+        e.preventDefault();
+        getWeather(e.target.textContent);
+      });
+  });
 //function to switch Kelvin To Farenheit
 function convertTempKelvinToFarenheit(kelvin) {
     return Math.round((kelvin - 273.15) * 9/5 + 32);

@@ -1,12 +1,12 @@
 body {
-    font-family: font-family: "Oswald", Helvetica, Arial, sans-serif!important;
+    font-family: "Oswald", Helvetica, Arial, sans-serif!important;
   }
 .linearGradient {
     background-image: linear-gradient(to bottom right, rgb(0, 88, 159), rgb(0, 141, 137));
   }
 .line {
   border-bottom: 5px solid transparent;
-  border-image: linear-gradient(to right, rgb(0, 88, 159)  0%,rgb(0, 88, 159)  55%, rgb(0, 110, 148) 56%, rgb(0, 110, 148) 58%,rgb(0, 120, 142) 59%, rgb(0, 120, 142) 61%, rgb(0, 141, 137) 62%, rgb(0, 141, 137) 100%);
+  border-image: linear-gradient(to right, rgb(0, 88, 159)  0%,rgb(0, 88, 159)  55%, rgb(0, 110, 148) 56%, rgb(0, 110, 148) 58%,rgb(0, 120, 142) 59%, rgb(0, 120, 142) 61%, rgb(0, 141, 137) 62%, rgb(0, 143, 138) 100%);
   border-image-slice: 1;
 }
 hr {
@@ -14,4 +14,8 @@ hr {
   border-style: none none dotted; 
   color: #fff; 
   background-color: #fff;
+}
+ul li:hover{
+background-image: linear-gradient(to bottom right, hsla(207, 100%, 31%, 0.5), hsla(178, 100%, 28%, 0.5) 100%);
+cursor: pointer;
 }
