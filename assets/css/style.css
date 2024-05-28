@@ -1,17 +1,14 @@
 body {
     font-family: font-family: "Oswald", Helvetica, Arial, sans-serif!important;
   }
-
 .linearGradient {
     background-image: linear-gradient(to bottom right, rgb(0, 88, 159), rgb(0, 141, 137));
   }
-
 .line {
   border-bottom: 5px solid transparent;
   border-image: linear-gradient(to right, rgb(0, 88, 159)  0%,rgb(0, 88, 159)  55%, rgb(0, 110, 148) 56%, rgb(0, 110, 148) 58%,rgb(0, 120, 142) 59%, rgb(0, 120, 142) 61%, rgb(0, 141, 137) 62%, rgb(0, 141, 137) 100%);
   border-image-slice: 1;
 }
-
 hr {
   border: 1px dotted rgb(0, 110, 148);
   border-style: none none dotted; 
